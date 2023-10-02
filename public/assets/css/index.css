@@ -1,0 +1,108 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: #13674f;
+    font-family: 'Pixelify Sans', monospace;
+    font-size: 18px;
+}
+.logo{
+    color: rgb(2, 12, 8);
+    font-family: 'Pixelify Sans', cursive;
+    font-size: 40px;
+    text-decoration: none;
+}
+.navbar{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    padding: 25px;
+    background-color: rgb(12, 15, 15);
+}
+
+.page{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.load-more{
+    font-family: 'Pixelify Sans', cursive;
+    width: 20%;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    margin-top: 5%;
+    border-radius: 10px;
+    padding: 10px;
+    margin-bottom: 10%;
+    background-color: rgb(12, 15, 15);
+}
+.load-more:hover{
+    background-color: rgb(29, 36, 36);
+}
+
+.news-container{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.list{
+    justify-content: center;
+    margin: 5%;
+    background-color: rgb(12, 15, 15);;
+    border-radius: 20px;
+}
+.title{
+    margin-top: 10%;
+    padding-left: 5%;
+    word-wrap: break-word;
+}
+.news{
+    margin-top: 3%;
+    padding-left: 5%;
+    padding-right: 5%;
+    word-wrap: break-word;
+}
+.date{
+    padding-left: 10%;
+    margin-top: 10px;
+    padding-bottom: 10%;
+}
+
+@media only screen and (min-width: 961px){
+    .page{
+        width: 960px;
+        margin: 0 auto;
+    }
+}
+
+@media only screen and (max-width: 960px){
+    .page{
+        width: 85%;
+        margin: 0 auto;
+        margin-top: 10%;
+    }
+    .news-container{
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+    
+    .list{
+        width: 80%;
+    }
+    .title{
+        font-size: 20px;
+    }
+    .news{
+        font-size: 15px;
+    }
+    .date{
+        font-size: 10px;
+    }
+}
