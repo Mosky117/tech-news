@@ -18,7 +18,7 @@ http.createServer(function (req, res) {
 // the second is the call back function
 // if no file is found the function gives an err
 // if the file is successfully found, the content of the file are contained in pgres
-        fs.readFile("head.html", function (err, pgres) {
+        fs.readFile("/public/index.html", function (err, pgres) {
             if (err)
                 res.write("HEAD.HTML NOT FOUND");
             else {
