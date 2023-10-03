@@ -50,9 +50,9 @@ http.createServer(function (req, res) {
 app.use(express.static('public')); //use the folder 'public'
 app.use(express.json());
 
-app.listen(port,()=>{
-    console.log(`Listening at http://localhost:${port}`);
-});
+// app.listen(port,()=>{
+//     console.log(`Listening at http://localhost:${port}`);
+// });
 
 app.get('/',(req,res)=>{
     res.sendFile('index.html',{root:__dirname+'/public'});
