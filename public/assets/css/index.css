@@ -29,6 +29,7 @@ body{
 }
 
 .load-more{
+    color: white;
     font-family: 'Pixelify Sans', cursive;
     width: 20%;
     display: flex;
