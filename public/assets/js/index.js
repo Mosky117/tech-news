@@ -34,7 +34,7 @@ function showNews(news){
     const time=document.createElement('p')
     const date=new Date(news[i].time*1000);
     time.textContent=date;
-    time.textContent=date.getDate()+'/'+(date.getMonth()+1)+'/'+date.getFullYear()+' '+date.getHours()+':'+date.getMinutes();
+    time.textContent=date.getDate()+'/'+(date.getMonth()+1)+'/'+date.getFullYear()+' '+date.getHours()+':'+date.getMinutes().toString().padStart(2, '0');
     time.className='date';
 
     list.appendChild(li.appendChild(title));
@@ -55,7 +55,7 @@ function showNews(news){
     url.target='blank';
     const time=document.createElement('p')
     const date=new Date(news[i].time*1000);
-    time.textContent=date.getDate()+'/'+(date.getMonth()+1)+'/'+date.getFullYear()+' '+date.getHours()+':'+date.getMinutes();
+    time.textContent=date.getDate()+'/'+(date.getMonth()+1)+'/'+date.getFullYear()+' '+date.getHours()+':'+date.getMinutes().toString().padStart(2, '0');
     time.className='date';
 
     list.appendChild(li.appendChild(title));
