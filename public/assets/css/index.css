@@ -9,7 +9,7 @@ body{
     font-size: 18px;
 }
 .logo{
-    color: rgb(2, 12, 8);
+    color: white;
     font-family: 'Pixelify Sans', cursive;
     font-size: 40px;
     text-decoration: none;
@@ -29,6 +29,7 @@ body{
 }
 
 .load-more{
+    color: white;
     font-family: 'Pixelify Sans', cursive;
     width: 20%;
     display: flex;
@@ -49,6 +50,7 @@ body{
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
+    color: white;
 }
 
 .list{
