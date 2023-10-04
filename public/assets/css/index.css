@@ -81,17 +81,45 @@ body{
     }
 }
 
+@media only screen and (min-device-width:250px) and (max-device-width: 425px){
+    .page{
+        width: 100%;
+        margin: 0 auto;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .news-container{
+        width: 100%;
+    }
+    .load-more{
+        width: 100px;
+    }
+    .list{
+        width: 200px;
+    }
+    .title{
+        font-size: 15px;
+    }
+    .news{
+        font-size: 10px;
+    }
+    .date{
+        font-size: 10px;
+    }
+}
+
 @media only screen and (max-width: 960px){
     .page{
         width: 85%;
         margin: 0 auto;
         margin-top: 10%;
     }
-    .news-container{
+    /* .news-container{
         display: flex;
         justify-content: center;
         flex-wrap: wrap;
-    }
+    } */
     
     .list{
         width: 80%;
