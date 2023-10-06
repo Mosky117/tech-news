@@ -4,8 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "./node_modules/webpack/bin/webpack.js -p --progress && node server.js",
-    "dev": "webpack server",
+    "start": "node server.js",
+    "dev": "webpack-dev-server --mode development --open",
+    "heroku-postbuild": "webpack -p",
     "build": "webpack --mode production --config ./webpack.config.js"
   },
   "keywords": [],
