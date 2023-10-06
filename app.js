@@ -12,6 +12,7 @@ app.listen(port,()=>{
 });
 
 app.get('/',(req,res)=>{
+    count=0;
     res.sendFile('index.html',{root:__dirname+'/public'});
 })
 
@@ -23,5 +24,6 @@ app.get('/all-news', async(req,res)=>{
         count+=10;
     }).catch(error=>{
         alert('Hacker News doesn\'t respond');
-    })
+        console.log(error);
+    }).finally(()=> console.log(`Call made for ${count-10} to ${count} ids news`));
 });

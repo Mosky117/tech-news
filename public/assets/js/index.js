@@ -7,7 +7,7 @@ async function getAllNews(callback) {
       const newsPromises = data.map(element => {
         return fetch(`https://hacker-news.firebaseio.com/v0/item/${element}.json`)
           .then(res => res.json())
-          .catch(error=> console.log(error))
+          .catch(error=> console.log('Hacker news services returned: '+error))
       });
       
       const news = await Promise.all(newsPromises);
@@ -16,6 +16,8 @@ async function getAllNews(callback) {
       return news;
     } catch (error) {
       console.log(error);
+    } finally{
+      console.log('Call made for data news retriving');
     }
   }
 
@@ -48,7 +50,6 @@ function newsBuilder(news){
 function showNews(news){
   newsBuilder(news);
 }
-
 
 document.querySelector('.load-more').addEventListener('click',()=>{
   getAllNews(showNews);
