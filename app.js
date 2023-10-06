@@ -1,7 +1,8 @@
 const express=require('express');
 const fetch = (...args) => import('node-fetch').then(({default: fetch}) => fetch(...args));
 const app=express();
-const port= process.env.PORT || 5000;
+const port= process.env.PORT || 3000;
+let count=0;
 
 app.use(express.static('public')); //use the folder 'public'
 app.use(express.json());
@@ -18,6 +19,9 @@ app.get('/all-news', async(req,res)=>{
     fetch('https://hacker-news.firebaseio.com/v0/newstories.json').then(res=>{
         return res.json();
     }).then(data=>{
-        res.send(data);
+        res.send(data.slice(count,count+10));
+        count+=10;
+    }).catch(error=>{
+        alert('Hacker News doesn\'t respond');
     })
 });
